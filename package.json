@@ -1,0 +1,25 @@
+{
+  "name": "myexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "tsc --esModuleInterop app.ts",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjamin-benoit/myExpress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjamin-benoit/myExpress/issues"
+  },
+  "homepage": "https://github.com/benjamin-benoit/myExpress#readme",
+  "devDependencies": {
+    "typescript": "^3.6.4",
+    "@types/node": "^12.7.12"
+  }
+}
