@@ -1,10 +1,16 @@
-import * as http from 'http';
+import HttpServer from './httpServer';
 
-export class App {
-  port:number | string ;
+const app = HttpServer();
+app.listen(8080);
 
-  constructor(port: number | string){
-      this.port = port;
-  }
+app.get('/home', (req: any, res: any) => {
+    console.log('page home');
+    res.write('page home');
+    res.end();
+});
 
-}
+app.get('/page', (req:any, res:any) => {
+    console.log('page');
+    res.write('page');
+    res.end();
+});
