@@ -23,5 +23,4 @@ var HttpServer = /** @class */ (function () {
     };
     return HttpServer;
 }());
-
 exports["default"] = (function () { return new HttpServer(); });

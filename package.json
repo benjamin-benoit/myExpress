@@ -4,14 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "tsc --esModuleInterop src/httpServer.ts",
     "start": "node src/httpServer.js",
     "watch-start": "nodemon src/app.js",
-    "build": "npm run lint && npm run build-tsc",
-    "build-tsc": "tsc",
-    "watch-tsc": "tsc -w",
-    "lint": "tsc --noEmit && eslint \"src/**.{js,ts}\" --quiet --fix"
+    "build": "npm run build-tsc"
   },
   "repository": {
     "type": "git",
