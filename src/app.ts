@@ -1,16 +1,35 @@
 import HttpServer from './httpServer';
 
 const app = HttpServer();
-app.listen(8080);
+const port = 3000;
 
-app.get('/home', (req: any, res: any) => {
-    console.log('page home');
-    res.write('page home');
-    res.end();
-});
+// Routes http
+app.get('/', (req, res) => {
+  console.log('get');
+})
 
-app.get('/page', (req:any, res:any) => {
-    console.log('page');
-    res.write('page');
-    res.end();
-});
+app.get('/api', (req, res) => {
+  console.log('get API');
+  res.json({hello :'From API'});
+})
+
+app.post('/sign-up', (req, res) => {
+  console.log('post sign-up');
+})
+
+app.put('/update-login', (req, res) => {
+  console.log('update login');
+})
+
+app.delete('/delete-login', (req, res) => {
+  console.log('delete login');
+})
+
+//Render
+// app.render('home', (err, html) => {
+  
+// })
+
+app.listen(port,() => {
+  console.log(`Server is listenning on ${port}`);
+})
